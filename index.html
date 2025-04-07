@@ -3,19 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Question for Cindy</title>
+    <title>Cindy's Beauty - Electronic Beauty Hub</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="decorative-text">Cindy</h1>
-        <p class="question">Do you love me?</p>
-        <div class="buttons">
-            <a href="Love-letter.html"><button id="yesBtn" class="btn yes-btn">Yes</button></a>
-            <button id="noBtn" class="btn no-btn">No</button>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Cindy's Beauty</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart" class="cart-toggle">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section with Parallax -->
+    <section id="home" class="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h2>Welcome to Cindy's Beauty</h2>
+            <p>Experience beauty with a futuristic twist.</p>
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#" data-category="all">All</a></li>
+                        <li><a href="#" data-category="brushes">Cleansing Brushes</a></li>
+                        <li><a href="#" data-category="lipgloss">Lip Gloss</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Products -->
+                <div class="main-products">
+                    <h2>New Products</h2>
+                    <div class="product-grid" id="product-grid">
+                        <!-- Products will be dynamically added here -->
+                    </div>
+
+                    <!-- Best Sellers -->
+                    <div class="best-sellers">
+                        <h2>Best Sellers</h2>
+                        <div class="best-sellers-grid" id="best-sellers-grid">
+                            <!-- Best sellers will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Box -->
+    <div id="order-box" class="order-box">
+        <div class="order-box-header">
+            <h3>Your Order</h3>
+            <button class="close-order-box">×</button>
+        </div>
+        <div class="order-items" id="order-items">
+            <!-- Order items will be dynamically added here -->
+        </div>
+        <div class="order-box-footer">
+            <h4>Total: $<span id="order-total">0.00</span></h4>
         </div>
     </div>
+
+    <!-- Order Confirmation Box -->
+    <div id="confirmation-box" class="confirmation-box">
+        <div class="confirmation-content">
+            <div class="tick-mark">✔</div>
+            <h3>Order Completed</h3>
+            <a href="#" id="initialize-order-link">Initialise Order Here</a>
+        </div>
+    </div>
+
+    <!-- Recent Purchase Notification -->
+    <div id="recent-purchase" class="recent-purchase">
+        <img src="pink.jpg" alt="Recent Purchase">
+        <div class="recent-purchase-details">
+            <p>A recent purchase was made by someone in Cyber City...</p>
+            <h4>Lip Shine - Pink Gloss</h4>
+            <span>5 minutes ago</span>
+        </div>
+        <button class="close-recent-purchase">×</button>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> support@cindysbeauty.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Glow Avenue, Cyber City, CA 94103</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Cindy's Beauty</h4>
+                    <p>Beauty with a futuristic twist.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-bottom">© 2025 Cindy's Beauty. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
